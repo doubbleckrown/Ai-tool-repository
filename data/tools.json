@@ -1,0 +1,189 @@
+[
+  {
+    "id": "chatgpt",
+    "name": "ChatGPT",
+    "tagline": "Conversational AI assistant for writing, coding, and research.",
+    "description": "ChatGPT is a general-purpose conversational AI assistant that can answer questions, draft and edit text, explain concepts, write and debug code, and help with brainstorming and planning across almost any topic.",
+    "website": "https://chat.openai.com",
+    "logoUrl": "",
+    "categories": ["chat", "writing", "productivity"],
+    "pricing": "freemium",
+    "featured": true
+  },
+  {
+    "id": "claude",
+    "name": "Claude",
+    "tagline": "AI assistant for thoughtful writing, analysis, and coding.",
+    "description": "Claude is a conversational AI assistant built for long-form writing, careful reasoning, document analysis, and software development, with an emphasis on helpful and reliable responses.",
+    "website": "https://claude.ai",
+    "logoUrl": "",
+    "categories": ["chat", "writing", "coding"],
+    "pricing": "freemium",
+    "featured": true
+  },
+  {
+    "id": "midjourney",
+    "name": "Midjourney",
+    "tagline": "AI image generator known for painterly, high-quality art.",
+    "description": "Midjourney generates highly stylized, artistic images from text prompts, popular with artists and designers for concept art, illustration, and creative exploration.",
+    "website": "https://www.midjourney.com",
+    "logoUrl": "",
+    "categories": ["image"],
+    "pricing": "paid",
+    "featured": true
+  },
+  {
+    "id": "dalle",
+    "name": "DALL·E",
+    "tagline": "Text-to-image generation from OpenAI.",
+    "description": "DALL·E generates and edits images from natural language descriptions, and can be used directly or through ChatGPT for quick visual concepts and illustrations.",
+    "website": "https://openai.com/dall-e-3",
+    "logoUrl": "",
+    "categories": ["image"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "stable-diffusion",
+    "name": "Stable Diffusion",
+    "tagline": "Open-source text-to-image model you can self-host.",
+    "description": "Stable Diffusion is an open-source image generation model that can run locally or through many hosted tools, offering flexibility and fine-grained control over image generation.",
+    "website": "https://stability.ai",
+    "logoUrl": "",
+    "categories": ["image"],
+    "pricing": "free"
+  },
+  {
+    "id": "runway",
+    "name": "Runway",
+    "tagline": "AI video generation and editing suite.",
+    "description": "Runway offers a suite of AI-powered video tools including text-to-video generation, video editing, motion tracking, and visual effects for creators and filmmakers.",
+    "website": "https://runwayml.com",
+    "logoUrl": "",
+    "categories": ["video"],
+    "pricing": "freemium",
+    "featured": true
+  },
+  {
+    "id": "pika",
+    "name": "Pika",
+    "tagline": "Text and image-to-video generation tool.",
+    "description": "Pika turns text prompts and still images into short video clips, with tools for style transfer, animation, and video editing.",
+    "website": "https://pika.art",
+    "logoUrl": "",
+    "categories": ["video"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "tagline": "Realistic AI voice generation and cloning.",
+    "description": "ElevenLabs generates natural-sounding speech from text, supports voice cloning, and is widely used for narration, dubbing, and voiceovers.",
+    "website": "https://elevenlabs.io",
+    "logoUrl": "",
+    "categories": ["audio"],
+    "pricing": "freemium",
+    "featured": true
+  },
+  {
+    "id": "suno",
+    "name": "Suno",
+    "tagline": "Generate full songs from a text prompt.",
+    "description": "Suno creates complete songs, including vocals and instrumentation, from a short text description of genre, mood, or lyrics.",
+    "website": "https://suno.com",
+    "logoUrl": "",
+    "categories": ["audio"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "github-copilot",
+    "name": "GitHub Copilot",
+    "tagline": "AI pair programmer built into your editor.",
+    "description": "GitHub Copilot suggests code completions, whole functions, and tests directly inside your editor, trained to work across many languages and frameworks.",
+    "website": "https://github.com/features/copilot",
+    "logoUrl": "",
+    "categories": ["coding", "productivity"],
+    "pricing": "paid",
+    "featured": true
+  },
+  {
+    "id": "cursor",
+    "name": "Cursor",
+    "tagline": "AI-first code editor built on VS Code.",
+    "description": "Cursor is a code editor with deep AI integration for chat-based editing, multi-file refactors, and code generation, built as a fork of VS Code.",
+    "website": "https://www.cursor.com",
+    "logoUrl": "",
+    "categories": ["coding"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "replit-ai",
+    "name": "Replit AI",
+    "tagline": "AI coding assistant built into the Replit IDE.",
+    "description": "Replit AI helps write, explain, and debug code directly inside the browser-based Replit development environment, and can scaffold full projects from a prompt.",
+    "website": "https://replit.com",
+    "logoUrl": "",
+    "categories": ["coding"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "notion-ai",
+    "name": "Notion AI",
+    "tagline": "AI writing and organization built into Notion.",
+    "description": "Notion AI helps draft, summarize, and organize notes and documents directly inside Notion workspaces, including meeting notes and project docs.",
+    "website": "https://www.notion.so/product/ai",
+    "logoUrl": "",
+    "categories": ["productivity", "writing"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "grammarly",
+    "name": "Grammarly",
+    "tagline": "AI writing assistant for grammar, tone, and clarity.",
+    "description": "Grammarly checks grammar, spelling, tone, and clarity as you write, with suggestions for rewriting sentences across browsers, docs, and email.",
+    "website": "https://www.grammarly.com",
+    "logoUrl": "",
+    "categories": ["writing"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "jasper",
+    "name": "Jasper",
+    "tagline": "AI content generation for marketing teams.",
+    "description": "Jasper generates marketing copy, blog posts, and social content, with brand voice controls aimed at content and marketing teams.",
+    "website": "https://www.jasper.ai",
+    "logoUrl": "",
+    "categories": ["writing"],
+    "pricing": "paid"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "tagline": "AI-powered answer engine with cited sources.",
+    "description": "Perplexity answers questions in natural language and cites its sources, functioning as a research-focused alternative to traditional search engines.",
+    "website": "https://www.perplexity.ai",
+    "logoUrl": "",
+    "categories": ["research", "chat"],
+    "pricing": "freemium",
+    "featured": true
+  },
+  {
+    "id": "otter",
+    "name": "Otter.ai",
+    "tagline": "AI meeting notes and transcription.",
+    "description": "Otter.ai transcribes meetings in real time and generates summaries, action items, and searchable notes from audio and video calls.",
+    "website": "https://otter.ai",
+    "logoUrl": "",
+    "categories": ["productivity", "audio"],
+    "pricing": "freemium"
+  },
+  {
+    "id": "gamma",
+    "name": "Gamma",
+    "tagline": "Generate presentations and documents with AI.",
+    "description": "Gamma turns a text prompt or outline into a designed presentation, document, or webpage, handling layout and formatting automatically.",
+    "website": "https://gamma.app",
+    "logoUrl": "",
+    "categories": ["productivity", "writing"],
+    "pricing": "freemium"
+  }
+]

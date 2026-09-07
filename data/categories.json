@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "writing",
+    "name": "Writing",
+    "description": "Tools for drafting, editing, and improving written content."
+  },
+  {
+    "slug": "image",
+    "name": "Image Generation",
+    "description": "Tools for generating and editing images with AI."
+  },
+  {
+    "slug": "video",
+    "name": "Video",
+    "description": "Tools for generating, editing, and enhancing video."
+  },
+  {
+    "slug": "audio",
+    "name": "Audio & Voice",
+    "description": "Tools for generating speech, music, and audio editing."
+  },
+  {
+    "slug": "coding",
+    "name": "Coding",
+    "description": "AI assistants and tools for writing and reviewing code."
+  },
+  {
+    "slug": "productivity",
+    "name": "Productivity",
+    "description": "Tools that help you plan, organize, and get work done faster."
+  },
+  {
+    "slug": "chat",
+    "name": "Chatbots & Assistants",
+    "description": "General-purpose conversational AI assistants."
+  },
+  {
+    "slug": "research",
+    "name": "Research & Data",
+    "description": "Tools for research, summarization, and working with data."
+  }
+]
