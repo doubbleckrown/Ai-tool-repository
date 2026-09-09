@@ -1,53 +1,4 @@
-import {
-  siClaude,
-  siCursor,
-  siElevenlabs,
-  siGithubcopilot,
-  siGrammarly,
-  siNotion,
-  siPerplexity,
-  siReplit,
-  siSuno,
-  type SimpleIcon,
-} from "simple-icons";
-
-const BRAND_ICONS: Record<string, SimpleIcon> = {
-  claude: siClaude,
-  "github-copilot": siGithubcopilot,
-  cursor: siCursor,
-  "replit-ai": siReplit,
-  "notion-ai": siNotion,
-  grammarly: siGrammarly,
-  perplexity: siPerplexity,
-  elevenlabs: siElevenlabs,
-  suno: siSuno,
-};
-
-// Self-hosted brand marks not available in simple-icons. These are black
-// marks on a transparent background, so they sit on a white badge to stay
-// visible in both light and dark mode.
-const LOGO_IMAGES: Record<string, string> = {
-  chatgpt: "/logos/chatgpt.png",
-  runway: "/logos/runway.png",
-  pika: "/logos/pika.png",
-};
-
-const COLORS = [
-  "bg-rose-500",
-  "bg-orange-500",
-  "bg-amber-500",
-  "bg-emerald-500",
-  "bg-teal-500",
-  "bg-sky-500",
-  "bg-indigo-500",
-  "bg-violet-500",
-  "bg-fuchsia-500",
-];
-
-function colorForName(name: string): string {
-  const hash = Array.from(name).reduce((sum, char) => sum + char.charCodeAt(0), 0);
-  return COLORS[hash % COLORS.length];
-}
+import { BRAND_ICONS, LOGO_IMAGES, fallbackBgClass } from "@/lib/brand";
 
 export default function ToolLogo({
   id,
@@ -92,7 +43,7 @@ export default function ToolLogo({
 
   return (
     <div
-      className={`flex ${boxSize} ${textSize} shrink-0 items-center justify-center rounded-xl font-semibold text-white ${colorForName(
+      className={`flex ${boxSize} ${textSize} shrink-0 items-center justify-center rounded-xl font-semibold text-white ${fallbackBgClass(
         name
       )}`}
       aria-hidden="true"
