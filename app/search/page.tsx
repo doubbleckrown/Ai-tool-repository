@@ -6,7 +6,7 @@ export default async function SearchPage({
   searchParams,
 }: PageProps<"/search">) {
   const { q } = await searchParams;
-  const query = Array.isArray(q) ? q[0] : q ?? "";
+  const query = (Array.isArray(q) ? q[0] : q ?? "").trim();
 
   const tools = filterTools(getAllTools(), { query });
 
