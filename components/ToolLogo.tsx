@@ -23,6 +23,15 @@ const BRAND_ICONS: Record<string, SimpleIcon> = {
   suno: siSuno,
 };
 
+// Self-hosted brand marks not available in simple-icons. These are black
+// marks on a transparent background, so they sit on a white badge to stay
+// visible in both light and dark mode.
+const LOGO_IMAGES: Record<string, string> = {
+  chatgpt: "/logos/chatgpt.png",
+  runway: "/logos/runway.png",
+  pika: "/logos/pika.png",
+};
+
 const COLORS = [
   "bg-rose-500",
   "bg-orange-500",
@@ -50,7 +59,20 @@ export default function ToolLogo({
   size?: "md" | "lg";
 }) {
   const boxSize = size === "lg" ? "h-16 w-16" : "h-10 w-10";
+  const image = LOGO_IMAGES[id];
   const icon = BRAND_ICONS[id];
+
+  if (image) {
+    return (
+      <div
+        className={`flex ${boxSize} shrink-0 items-center justify-center rounded-xl border border-black/10 bg-white p-2.5`}
+        aria-hidden="true"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element -- static local asset, no next/image config in this project */}
+        <img src={image} alt="" className="h-full w-full object-contain" />
+      </div>
+    );
+  }
 
   if (icon) {
     return (
