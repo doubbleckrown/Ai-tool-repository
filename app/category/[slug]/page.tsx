@@ -1,8 +1,7 @@
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar";
-import CategoryFilterBar from "@/components/CategoryFilterBar";
-import SortableTools from "@/components/SortableTools";
+import ToolControls from "@/components/ToolControls";
 import {
   getAllCategories,
   getCategoryBySlug,
@@ -37,9 +36,12 @@ export default async function CategoryPage({
       </section>
 
       <section className="flex flex-col gap-4">
-        <CategoryFilterBar categories={categories} activeSlug={slug} />
         <Suspense>
-          <SortableTools tools={tools} />
+          <ToolControls
+            tools={tools}
+            categories={categories}
+            activeCategorySlug={slug}
+          />
         </Suspense>
       </section>
     </div>

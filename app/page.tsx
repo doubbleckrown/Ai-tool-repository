@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar";
-import CategoryFilterBar from "@/components/CategoryFilterBar";
-import SortableTools from "@/components/SortableTools";
+import ToolControls from "@/components/ToolControls";
 import FeaturedTools from "@/components/FeaturedTools";
 import { getAllCategories, getAllTools } from "@/lib/tools";
 
@@ -25,9 +24,8 @@ export default function HomePage() {
       <FeaturedTools />
 
       <section className="flex flex-col gap-4">
-        <CategoryFilterBar categories={categories} />
         <Suspense>
-          <SortableTools tools={tools} />
+          <ToolControls tools={tools} categories={categories} />
         </Suspense>
       </section>
     </div>

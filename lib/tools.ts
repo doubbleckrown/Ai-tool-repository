@@ -39,33 +39,14 @@ export function getRelatedTools(tool: Tool, limit = 3): Tool[] {
     .slice(0, limit);
 }
 
-export type SortKey = "name" | "category" | "price";
+export type NameSortDirection = "asc" | "desc";
 
-const PRICE_ORDER: Record<Pricing, number> = { free: 0, freemium: 1, paid: 2 };
-
-function primaryCategoryName(tool: Tool): string {
-  const category = categories.find((c) => c.slug === tool.categories[0]);
-  return category?.name ?? tool.categories[0] ?? "";
-}
-
-export function sortTools(tools_: Tool[], sortBy: SortKey): Tool[] {
-  const sorted = [...tools_];
-
-  if (sortBy === "name") {
-    sorted.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortBy === "category") {
-    sorted.sort((a, b) => {
-      const byCategory = primaryCategoryName(a).localeCompare(primaryCategoryName(b));
-      return byCategory !== 0 ? byCategory : a.name.localeCompare(b.name);
-    });
-  } else if (sortBy === "price") {
-    sorted.sort((a, b) => {
-      const byPrice = PRICE_ORDER[a.pricing] - PRICE_ORDER[b.pricing];
-      return byPrice !== 0 ? byPrice : a.name.localeCompare(b.name);
-    });
-  }
-
-  return sorted;
+export function sortToolsByName(
+  tools_: Tool[],
+  direction: NameSortDirection
+): Tool[] {
+  const sorted = [...tools_].sort((a, b) => a.name.localeCompare(b.name));
+  return direction === "desc" ? sorted.reverse() : sorted;
 }
 
 export interface ToolFilters {
