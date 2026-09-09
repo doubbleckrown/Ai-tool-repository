@@ -69,3 +69,14 @@ body {
     radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.16), transparent 60%),
     radial-gradient(circle at 100% 100%, rgba(14, 165, 233, 0.16), transparent 60%);
 }
+
+/*
+ * Tap feedback for touch devices, where :hover never fires. Pair with
+ * Tailwind's own `transition` utility (which already covers `transform`)
+ * on the same element so the scale change animates — this class only
+ * supplies the :active state itself, so it never fights Tailwind's
+ * layered transition-property utilities.
+ */
+.tap-bounce:active {
+  transform: scale(0.95);
+}

@@ -10,6 +10,7 @@ import {
 import { useRouter } from "next/navigation";
 import { getAllTools } from "@/lib/tools";
 import ToolLogo from "@/components/ToolLogo";
+import { tapBounce } from "@/lib/ui";
 
 const ALL_TOOLS = getAllTools();
 const MAX_RESULTS = 8;
@@ -102,7 +103,7 @@ export default function CommandPalette() {
       <button
         type="button"
         onClick={openPalette}
-        className="flex items-center gap-2 rounded-lg border border-black/15 px-3 py-1.5 text-sm text-black/60 transition hover:border-black/35 dark:border-white/20 dark:text-white/60 dark:hover:border-white/40"
+        className={`${tapBounce} flex items-center gap-2 rounded-lg border border-black/15 px-3 py-1.5 text-sm text-black/60 hover:border-black/35 dark:border-white/20 dark:text-white/60 dark:hover:border-white/40`}
       >
         <span aria-hidden="true">🔍</span>
         <span className="hidden sm:inline">Search</span>
@@ -145,7 +146,7 @@ export default function CommandPalette() {
                     type="button"
                     onClick={() => selectTool(tool.id)}
                     onMouseEnter={() => setActiveIndex(index)}
-                    className={`flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left transition ${
+                    className={`${tapBounce} flex w-full items-center gap-3 rounded-lg px-3 py-2 text-left ${
                       index === activeIndex ? "bg-black/5 dark:bg-white/10" : ""
                     }`}
                   >

@@ -14,6 +14,10 @@ const themeInitScript = `
     var isDark = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
     document.documentElement.classList.toggle("dark", isDark);
   } catch (e) {}
+  // iOS Safari only applies :active styles on tap if some ancestor has a
+  // touchstart listener. This no-op listener enables tap feedback (button
+  // press/bounce effects) site-wide.
+  document.addEventListener("touchstart", function () {}, { passive: true });
 `;
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

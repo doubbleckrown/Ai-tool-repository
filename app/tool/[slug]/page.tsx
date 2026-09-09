@@ -4,6 +4,7 @@ import PricingBadge from "@/components/PricingBadge";
 import ToolLogo from "@/components/ToolLogo";
 import ToolGrid from "@/components/ToolGrid";
 import { getAllTools, getRelatedTools, getToolById } from "@/lib/tools";
+import { tapBounce } from "@/lib/ui";
 
 export function generateStaticParams() {
   return getAllTools().map((tool) => ({ slug: tool.id }));
@@ -48,7 +49,7 @@ export default async function ToolDetailPage({
             <Link
               key={category}
               href={`/category/${category}`}
-              className="rounded-full border border-black/15 px-3 py-1 text-xs hover:border-black/35 dark:border-white/20 dark:hover:border-white/40"
+              className={`${tapBounce} rounded-full border border-black/15 px-3 py-1 text-xs hover:border-black/35 dark:border-white/20 dark:hover:border-white/40`}
             >
               {category}
             </Link>
@@ -59,7 +60,7 @@ export default async function ToolDetailPage({
           href={tool.website}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block w-fit rounded-lg bg-foreground px-5 py-2.5 text-sm font-medium text-background transition hover:opacity-90"
+          className={`${tapBounce} inline-block w-fit rounded-lg bg-foreground px-5 py-2.5 text-sm font-medium text-background hover:opacity-90`}
         >
           Visit website ↗
         </a>

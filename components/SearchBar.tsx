@@ -1,3 +1,5 @@
+import { tapBounce } from "@/lib/ui";
+
 export default function SearchBar({ defaultValue = "" }: { defaultValue?: string }) {
   return (
     <form action="/search" method="get" className="flex w-full max-w-xl gap-2">
@@ -11,7 +13,7 @@ export default function SearchBar({ defaultValue = "" }: { defaultValue?: string
       />
       <button
         type="submit"
-        className="shrink-0 rounded-lg bg-foreground px-4 py-2.5 text-sm font-medium text-background transition hover:opacity-90"
+        className={`${tapBounce} shrink-0 rounded-lg bg-foreground px-4 py-2.5 text-sm font-medium text-background hover:opacity-90`}
       >
         Search
       </button>

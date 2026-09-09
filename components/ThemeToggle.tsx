@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import { tapBounce } from "@/lib/ui";
 
 const listeners = new Set<() => void>();
 
@@ -35,7 +36,7 @@ export default function ThemeToggle() {
       type="button"
       onClick={() => setTheme(!isDark)}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
-      className="rounded-lg border border-black/15 px-3 py-1.5 text-sm transition hover:border-black/35 dark:border-white/20 dark:hover:border-white/40"
+      className={`${tapBounce} rounded-lg border border-black/15 px-3 py-1.5 text-sm hover:border-black/35 dark:border-white/20 dark:hover:border-white/40`}
     >
       {isDark ? "☀️ Light" : "🌙 Dark"}
     </button>
