@@ -1,5 +1,6 @@
+import { Suspense } from "react";
 import SearchBar from "@/components/SearchBar";
-import ToolGrid from "@/components/ToolGrid";
+import SortableTools from "@/components/SortableTools";
 import { filterTools, getAllTools } from "@/lib/tools";
 
 export default async function SearchPage({
@@ -22,7 +23,9 @@ export default async function SearchPage({
         </p>
       </section>
 
-      <ToolGrid tools={tools} />
+      <Suspense>
+        <SortableTools tools={tools} />
+      </Suspense>
     </div>
   );
 }
