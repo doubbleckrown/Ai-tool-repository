@@ -30,7 +30,7 @@ export default async function ToolDetailPage({
       <section className="flex flex-col gap-4">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-4">
-            <ToolLogo name={tool.name} size="lg" />
+            <ToolLogo id={tool.id} name={tool.name} size="lg" />
             <div>
               <h1 className="text-2xl font-bold sm:text-3xl">{tool.name}</h1>
               <p className="text-black/70 dark:text-white/70">{tool.tagline}</p>

@@ -10,7 +10,7 @@ export default function ToolCard({ tool }: { tool: Tool }) {
       className="flex flex-col gap-3 rounded-xl border border-black/10 p-5 transition hover:border-black/25 hover:shadow-sm dark:border-white/15 dark:hover:border-white/30"
     >
       <div className="flex items-start justify-between gap-3">
-        <ToolLogo name={tool.name} />
+        <ToolLogo id={tool.id} name={tool.name} />
         <PricingBadge pricing={tool.pricing} />
       </div>
       <div>
