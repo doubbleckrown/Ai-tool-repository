@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NavigationOverlay from "@/components/NavigationOverlay";
 
 export const metadata: Metadata = {
   title: "AI Tools Directory",
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="en" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        <NavigationOverlay />
         <Header />
         <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-10">
           {children}

@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import PricingBadge from "@/components/PricingBadge";
 import ToolLogo from "@/components/ToolLogo";
 import ToolGrid from "@/components/ToolGrid";
+import NavLink from "@/components/NavLink";
 import { getAllTools, getRelatedTools, getToolById } from "@/lib/tools";
 import { tapBounce } from "@/lib/ui";
 
@@ -24,9 +24,9 @@ export default async function ToolDetailPage({
 
   return (
     <div className="flex flex-col gap-10">
-      <Link href="/" className="text-sm text-black/60 hover:underline dark:text-white/60">
+      <NavLink href="/" className="text-sm text-black/60 hover:underline dark:text-white/60">
         ← Back to all tools
-      </Link>
+      </NavLink>
 
       <section className="flex flex-col gap-4">
         <div className="flex items-start justify-between gap-4">
@@ -46,13 +46,13 @@ export default async function ToolDetailPage({
 
         <div className="flex flex-wrap gap-2">
           {tool.categories.map((category) => (
-            <Link
+            <NavLink
               key={category}
               href={`/category/${category}`}
               className={`${tapBounce} rounded-full border border-black/15 px-3 py-1 text-xs hover:border-black/35 dark:border-white/20 dark:hover:border-white/40`}
             >
               {category}
-            </Link>
+            </NavLink>
           ))}
         </div>
 

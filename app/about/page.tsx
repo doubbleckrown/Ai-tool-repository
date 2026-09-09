@@ -17,6 +17,9 @@ export default function AboutPage() {
         </a>
         .
       </p>
+      <p className="text-sm text-black/60 dark:text-white/60">
+        Built by Doubbleckrown
+      </p>
     </div>
   );
 }

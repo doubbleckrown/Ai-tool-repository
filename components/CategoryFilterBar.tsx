@@ -1,5 +1,5 @@
-import Link from "next/link";
 import type { Category } from "@/lib/types";
+import NavLink from "@/components/NavLink";
 import { tapBounce } from "@/lib/ui";
 
 export default function CategoryFilterBar({
@@ -11,7 +11,7 @@ export default function CategoryFilterBar({
 }) {
   return (
     <div className="flex flex-wrap gap-2">
-      <Link
+      <NavLink
         href="/"
         className={`${tapBounce} rounded-full border px-3 py-1.5 text-sm ${
           !activeSlug
@@ -20,9 +20,9 @@ export default function CategoryFilterBar({
         }`}
       >
         All
-      </Link>
+      </NavLink>
       {categories.map((category) => (
-        <Link
+        <NavLink
           key={category.slug}
           href={`/category/${category.slug}`}
           className={`${tapBounce} rounded-full border px-3 py-1.5 text-sm ${
@@ -32,7 +32,7 @@ export default function CategoryFilterBar({
           }`}
         >
           {category.name}
-        </Link>
+        </NavLink>
       ))}
     </div>
   );

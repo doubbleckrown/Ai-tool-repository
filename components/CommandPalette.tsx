@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { getAllTools } from "@/lib/tools";
 import ToolLogo from "@/components/ToolLogo";
 import { tapBounce } from "@/lib/ui";
+import { showNavigationLoader } from "@/lib/navigationLoader";
 
 const ALL_TOOLS = getAllTools();
 const MAX_RESULTS = 8;
@@ -76,7 +77,7 @@ export default function CommandPalette() {
 
   function selectTool(id: string) {
     setOpen(false);
-    router.push(`/tool/${id}`);
+    showNavigationLoader(() => router.push(`/tool/${id}`));
   }
 
   function onQueryChange(e: ChangeEvent<HTMLInputElement>) {
