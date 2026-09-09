@@ -8,10 +8,19 @@ export const metadata: Metadata = {
   description: "Discover useful AI tools by category.",
 };
 
+const themeInitScript = `
+  try {
+    var stored = localStorage.getItem("theme");
+    var isDark = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.documentElement.classList.toggle("dark", isDark);
+  } catch (e) {}
+`;
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <Header />
         <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-10">
           {children}
